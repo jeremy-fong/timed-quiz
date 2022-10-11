@@ -11,32 +11,50 @@
     <!-- header -->
     <header>
         <div>Hall of Fame</div>
-        <div>Time Remaining: 60</div>
+        <div id="countdown">Time Remaining: 60</div>
     </header>
-    <!-- Main: Start quiz, questions, end of quiz, hall of fame -->
+    <!-- Main: Start quiz display, questions, end of quiz, hall of fame -->
     <main>
             <!-- start quiz -->
-            <div>
-                <h1>Coding Quiz Challenge</h1>
+            <div class="intro">
+                <h1>Coding Quiz Challenge</h1><br/>
                 <p>Test your basic coding knowledge with this JavaScript quiz! Try to answer each question within the time limit! Be careful to get it correct because incorrect answers will result in a penalty of 10 second off the clock. Do well and solidify your high score in the Hall of Fame! Best of Luck!
-                </p>
+                </p><br/>
                 <div>
-                    <button>Start Quiz!</button>
+                    <button id="start" class="start-btn">Start Quiz!</button>
                 </div>
             </div>
             <!-- questions -->
-            <div>
-                
+            <div id="container" class="hide">
+                <h1 id="question"></h1>
+                <div class="buttons">
+                    <button id="ans-1" value="0"></button>
+                    <button id="ans-2" value="1"></button>
+                    <button id="ans-3" value="2"></button>
+                    <button id="ans-4" value="3"></button>
+                </div>
+                <hr>
+                <div id="right-wrong" class="right">Right!</div>
             </div>
             <!-- end of quiz -->
-            <div>
-
+            <div id="score-form" class="hide">
+                <h1>Finished!</h1>
+                <h2>Your final score is: .<span id="final-score"></span></h2>
+                <form id="score-form">
+                    <label for="initials">Enter your initials</label>
+                    <input type="text" id="initials" size="5" placeholder="" /> 
+                    <button id="submit">Submit</button>
+                </form>
             </div>
             <!-- Hall of fame -->
-            <div>
-
+            <div id="hof" class="hide">
+                <h1>Hall of Fame</h1>
+                <ol id="scores-list"></ol>
+                <div id="hof-btns">
+                    <button id="go-back">Go Back</button>
+                    <button id="clear">Clear</button>
+                </div>
             </div>
-        </section>
         </main>
         <script src="./assets/script.js"></script>
     </body>

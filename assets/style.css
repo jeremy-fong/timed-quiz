@@ -1,16 +1,44 @@
+/* general styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/* body */
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* header */
 header {
-    background-color: #D2DAFF;
+    background-color: #D9D7F1;
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    color: #541690;
 }
+/* intro */
+.intro {
+    text-align: center;
+    padding: 20px;
+}
+
+.start-btn {
+    background-color: #541690;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 25px;
+}
+
+.start-btn:hover {
+    background-color: #A460ED;
+}
+
+.hide {
+    display: none;
+}
+
+/* questions */
+
+/* hall of fame */
