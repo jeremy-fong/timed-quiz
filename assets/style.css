@@ -41,5 +41,33 @@ header {
 
 /* questions */
 
+#container {
+    display: grid;
+    padding: 25px;
+    margin: 5px;
+    grid-template-columns: .5fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+.btn-grid {
+    display: grid;
+    gap: 5px;
+    width: 50%;
+
+}
+
+.btn {
+    background-color: #541690;
+    color: white;
+    border-radius: 25px;
+    font-size: 14px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.btn:hover {
+    background-color: #A460ED;
+}
 
 /* hall of fame */
