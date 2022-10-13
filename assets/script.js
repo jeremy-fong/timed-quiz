@@ -118,6 +118,84 @@ function endQuiz() {
     showElement(quizEndEl);
 }
 
+function compareScores(a, b) {
+    return b.score - a.score;
+}
+
+function renderScores() {
+    hideElement(questionContainerEl);
+    hideElement(quizEndEl);
+    hideElement(introEl);
+    scoresList.innerHTML = "";
+    scores.sort(compareScores);
+    for (let i = 0; i < scores.length; i++) {
+        var li = document.createElement('li');
+        li.textContent = `${scores[i].initials} - ${scores[i].score}`;
+        scoresList.appendChild(li);
+    }
+
+    showElement(hallOfFame);
+}
+
+function storeScore() {
+    localStorage.setItem('scores', JSON.stringify(scores));
+}
+
+function loadScores() {
+    var storedScores = JSON.parse(localStorage.getItem('scores'));
+    if (storedScores) {
+        scores = storeScores;
+    }
+}
+
+// loadScores();
+
+backBtn.addEventListener("click", function () {
+
+    clearInterval(timerInterval);
+
+    questionIndex = 0;
+    secondsLeft = 60;
+
+    timerEl.textContent = secondsLeft;
+
+    resetQuestions();
+    hideElement(hallOfFame);
+    showElement(introEl);
+})
+
+scoreFormEl.addEventListener('submit', function(event) {
+    event.preventDefault();
+    var initials = initialsEl.value.trim();
+    if (!initials) {
+        return;
+    }
+
+    var initialsScore = { initials: initials, score: secondsLeft };
+
+
+    scores.push(initialsScore);
+
+    initialsEl.value = "";
+
+
+    storeScore();
+
+    renderScores();
+})
+
+
+clearBtn.addEventListener('click', function() {
+    localStorage.clear();
+    scores = [];
+    renderScores();
+})
+
+linkHof.addEventListener('click', function() {
+    clearInterval(timerInterval);
+    renderScores();
+
+})
 
 var questionBank = [
     {
@@ -141,9 +219,9 @@ var questionBank = [
         correctAnswer: "4. console.log"
     },
     {
-        question: "What is the correct syntax for referring to an external script called 'xxx.js'?",
-        possChoices: ["1. <script href='xxx.js'>", "2. <script name='xxx.js'>", "3. <script value='xxx.js'>", "4. <script src='xxx.js'>"],
-        correctAnswer: "4. <script src='xxx.js'>"
+        question: "What is the correct syntax for referring to an external script called '***.js'?",
+        possChoices: ["1. <script href='***.js'>", "2. <script name='***.js'>", "3. <script link='***.js'>", "4. <script src='***.js'>"],
+        correctAnswer: "4. <script src='***.js'>"
     },
     
 ];
