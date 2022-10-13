@@ -104,6 +104,20 @@ function nextQuestion() {
     }
 }
 
+function endQuiz() {
+    clearInterval(timerInterval); 
+    timerEl.textContent = 0; 
+ 
+    
+    if (secondsLeft < 0) {
+        secondsLeft = 0;
+    }
+    
+    finalScoreEl.textContent = secondsLeft;
+    hideElement(questionContainerEl);
+    showElement(quizEndEl);
+}
+
 
 var questionBank = [
     {
