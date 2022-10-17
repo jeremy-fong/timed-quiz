@@ -4,6 +4,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
 /* body */
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -70,4 +72,50 @@ header {
     background-color: #A460ED;
 }
 
+#submit {
+    background-color: #541690;
+    color: white;
+    border-radius: 25px;
+    font-size: 14px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#submit:hover {
+    background-color: #A460ED;
+}
+
 /* hall of fame */
+
+#go-back {
+    background-color: #541690;
+    color: white;
+    border-radius: 25px;
+    font-size: 14px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#clear {
+    background-color: #541690;
+    color: white;
+    border-radius: 25px;
+    font-size: 14px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#go-back:hover {
+    background-color: #A460ED;
+}
+
+#clear:hover {
+    background-color: #A460ED;
+}
+
+#scores-list {
+    background-color: #D9D7F1;
+}
+
+
+

@@ -100,7 +100,7 @@ function nextQuestion() {
     } else {
         setTimeout(function() {
             endQuiz();
-        },500)
+        },1000)
     }
 }
 
