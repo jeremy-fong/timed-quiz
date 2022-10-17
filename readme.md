@@ -9,5 +9,5 @@ This is a 60 second timed JavaScript quiz that displays a question once the star
 
 
 ## Deployment URL
-Deployed URL: 
-GitHub URL: 
+Deployed URL: https://jeremy-fong.github.io/timed-quiz/
+GitHub URL: https://github.com/jeremy-fong/timed-quiz
